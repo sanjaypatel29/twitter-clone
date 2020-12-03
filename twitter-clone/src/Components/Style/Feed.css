@@ -1,0 +1,9 @@
+.feed{
+    height: 750px;
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.feed::-webkit-scrollbar{
+    display:none;
+}
