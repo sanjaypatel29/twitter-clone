@@ -1,0 +1,26 @@
+.feed{
+    height: 750px;
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.searchBox{
+    position: absolute;
+    width: 96%;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.input{
+    
+    width: 80%;
+    height: 40px;
+    outline: none;
+    border: none;
+}
+
+.icon{
+    position: relative;
+    left: 15px;
+    top: 15px;
+}

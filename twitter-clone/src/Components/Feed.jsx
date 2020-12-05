@@ -1,6 +1,6 @@
 import React from 'react'
-import StarIcon from '@material-ui/icons/Star';
-import "./Style/Feed.css";
+import StarBorderRoundedIcon from '@material-ui/icons/StarBorderRounded';
+import "../Style/Feed.css";
 import TweetBox from './TweetBox';
 
 function Feed() {
@@ -9,7 +9,7 @@ function Feed() {
             {/* home Box */}
             <div className="d-flex p-2 sticky-top border bg-white">
                 <h3 className="font-weight-bolder flex-grow-1 font-weight-bold">Home</h3>
-                <StarIcon />
+                <StarBorderRoundedIcon className="text-primary" />
             </div>
             <div>
                 <TweetBox />

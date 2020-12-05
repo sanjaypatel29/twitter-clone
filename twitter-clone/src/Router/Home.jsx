@@ -1,7 +1,7 @@
 import React from 'react'
-import Feed from './Feed'
-import Sidebar from './Sidebar'
-import Widgets from './Widgets'
+import Feed from '../Components/Feed'
+import Sidebar from '../Components/Sidebar'
+import Widgets from '../Components/Widgets'
 
 function Home() {
     return (
@@ -11,7 +11,7 @@ function Home() {
                     <Sidebar />
 
                 </div>
-                <div className="col-6 ml-4">
+                <div className="col-6 ml-3">
                     <Feed />
                 </div>
                 <div className="col-3 mr-5">

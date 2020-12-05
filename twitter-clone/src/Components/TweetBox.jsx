@@ -14,8 +14,8 @@ function TweetBox() {
                     <img style={{ width: "60px", borderRadius: "50%" }} src="https://pbs.twimg.com/profile_images/1255742917873786883/56R4sLLy_400x400.jpg" alt="profilepi" />
                 </div>
                 <div className="col-11 p-2 px-3">
-                    <input className="border-0 w-100 h4" style={{ height: "50px", outline: "none" }} placeholder="Whats Happening?" />
-                    <input className="border-0 w-100 h6" style={{ height: "20px", outline: "none" }} placeholder="Image url" />
+                    <input type="text" className="border-0 w-100 h4" style={{ height: "50px", outline: "none" }} placeholder="Whats Happening?" />
+                    <input type="url" className="border-0 w-100 h6" style={{ height: "20px", outline: "none" }} placeholder="Image url" />
 
                     <div className="row border-top">
                         <div className="col-9 mt-3" style={{ color: "#28a8f7" }}>
