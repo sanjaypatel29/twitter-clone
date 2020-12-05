@@ -25,12 +25,6 @@ const reducer = (state = initState, action) => {
         err: "",
       };
 
-    case LOGIN_FAILURE:
-      return {
-        ...state,
-        err: action.payload.response.data
-      };
-
     case LOGIN_SUCCESS:
       saveData("userData", action.payload);
       saveData("auth", true)
@@ -41,10 +35,25 @@ const reducer = (state = initState, action) => {
         auth: true,
       };
 
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        err: action.payload.response.data
+      };
+
     case SIGNUP_REQUEST:
       return {
         ...state,
         err: "",
+      };
+
+    case SIGNUP_SUCCESS:
+      saveData("userData", action.payload);
+      return {
+        ...state,
+        err: "",
+        userData: action.payload,
+        auth: true
       };
 
     case SIGNUP_FAILURE:
@@ -53,15 +62,6 @@ const reducer = (state = initState, action) => {
         err: action.payload.response.data
       };
 
-    case SIGNUP_SUCCESS:
-      saveData("userData", action.payload);
-      saveData("auth", true)
-      return {
-        ...state,
-        err: "",
-        userData: action.payload,
-        auth: true
-      };
 
     case LOGOUT:
       saveData("auth", false)

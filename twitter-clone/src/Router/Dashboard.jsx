@@ -14,10 +14,13 @@ function Dashboard() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [dob, setDob] = useState("")
+    const [tHandle, setTHandle] = useState("")
+    const [profileImage, setProfileImage] = useState("")
+    const [name, setName] = useState("")
 
     const handleRegister = () => {
-        console.log(email, password, dob)
-        dispatch(signUp({ email, password, dob }))
+        console.log(email, password, dob, name, profileImage, tHandle)
+        dispatch(signUp({ email, password, dob, name, profileImage, tHandle }))
     }
 
     return (
@@ -37,7 +40,7 @@ function Dashboard() {
 
 
                         {/* <!-- Modal --> */}
-                        <div className="modal fade" id="Signnup" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div className="modal fade" id="Signnup" tabIndex="-1" role="dialog" aria-hidden="true">
                             <div className="modal-dialog modal-dialog-centered" role="document">
                                 <div className="modal-content">
                                     <div className="modal-body">
@@ -46,33 +49,47 @@ function Dashboard() {
                                                 <div className="text-center col-12">
                                                     <div className=" row d-flex">
                                                         <TwitterIcon className="text-primary flex-grow-1 ml-3" style={{ fontSize: "30px", }} />
-                                                        <button type="button" className="btn btn-primary font-weight-bold rounded-pill" onlick={handleRegister}>Next</button>
+                                                        <button type="button" className="btn btn-primary font-weight-bold rounded-pill" onClick={handleRegister}>Next</button>
                                                     </div>
                                                     <div className="row">
                                                         <h4 className="font-weight-bolder float-left"> Create Your Account</h4>
                                                     </div>
                                                     <form onSubmit={handleRegister}>
                                                         <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
-                                                            <span className="text-muted ">Phone, email, or username</span><br />
+                                                            <span className="text-muted">name</span><br />
+                                                            <input name="name" value={name} onChange={(e) => setName(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                                        </div>
+
+                                                        <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
+                                                            <span className="text-muted ">email</span><br />
                                                             <input name="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
                                                         </div>
+
                                                         <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                                             <span className="text-muted">Password</span><br />
                                                             <input name="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="password" />
                                                         </div>
 
                                                         <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
-                                                            <span className="text-muted">Password</span><br />
+                                                            <span className="text-muted">profileImage</span><br />
+                                                            <input name="profileImage" value={profileImage} onChange={(e) => setProfileImage(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                                        </div>
+
+                                                        <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
+                                                            <span className="text-muted">twitterHandle</span><br />
+                                                            <input name="twitterHandle" value={tHandle} onChange={(e) => setTHandle(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                                        </div>
+
+                                                        <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
+                                                            <span className="text-muted">Date of birth</span><br />
                                                             <input name="dob" value={dob} onChange={(e) => setDob(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="date" />
                                                         </div>
                                                         <button type="submit" className="mt-4 text-white bg-primary border border-primary rounded-pill font-weight-bold" style={{ height: "50px", outline: "none", width: "100%" }}>SignUp</button>
                                                     </form>
-                                                    <div>{err}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

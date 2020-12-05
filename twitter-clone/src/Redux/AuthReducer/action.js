@@ -26,7 +26,7 @@ export const login = (payload) => (dispatch) => {
   axios
     .post("http://localhost:5000/login", payload)
     .then((res) => dispatch(loginSuccess(res.data)))
-    .catch((err) => dispatch(loginFailure(err)));
+    .catch((err) => dispatch(loginFailure(err.response.data)));
 };
 
 export const signUpRequest = () => ({

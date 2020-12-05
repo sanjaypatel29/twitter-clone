@@ -2,6 +2,8 @@ import React from 'react'
 import "../Style/Widgets.css"
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
+const data = JSON.parse(localStorage.getItem("userData"))
+console.log(data.user)
 
 function Widgets() {
     return (
@@ -92,7 +94,7 @@ function Widgets() {
                             </div>
                         </div>
                         <div className="col-2  mt-2">
-                            <button type="button" class="btn btn-outline-primary font-weight-bold rounded-pill">Follow</button>
+                            <button type="button" className="btn btn-outline-primary font-weight-bold rounded-pill">Follow</button>
                         </div>
                     </div>
 
@@ -109,7 +111,7 @@ function Widgets() {
                             </div>
                         </div>
                         <div className="col-2  mt-2">
-                            <button type="button" class="btn btn-outline-primary font-weight-bold rounded-pill">Follow</button>
+                            <button type="button" className="btn btn-outline-primary font-weight-bold rounded-pill">Follow</button>
                         </div>
                     </div>
 
@@ -126,7 +128,7 @@ function Widgets() {
                 <br />
                 <span>Ads info</span>
                 <span>More ...</span>
-                <span className="mb-5"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Twitter, Inc.</span>
+                <span className="mb-5"><i className="fa fa-copyright" aria-hidden="true"></i> 2020 Twitter, Inc.</span>
             </div>
 
         </div >

@@ -11,7 +11,7 @@ export default function PrivateRoutes() {
         <>
             {
                 !auth ? (
-                    <Redirect to="/login" />
+                    <Redirect to="/" />
                 ) : (
                         <switch>
                             <Route path="/home" render={() => <Home />} />

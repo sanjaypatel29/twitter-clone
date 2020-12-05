@@ -7,11 +7,12 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import Tweets from './Tweets';
 
 function TweetBox() {
+    const data = JSON.parse(localStorage.getItem("userData"))
     return (
         <div className="container">
             <div className="row border bg-white">
                 <div className="col-1 p-1">
-                    <img style={{ width: "60px", borderRadius: "50%" }} src="https://pbs.twimg.com/profile_images/1255742917873786883/56R4sLLy_400x400.jpg" alt="profilepi" />
+                    <img style={{ width: "60px", borderRadius: "50%" }} src={data.user.profileImage} alt="profilepi" />
                 </div>
                 <div className="col-11 p-2 px-3">
                     <input type="text" className="border-0 w-100 h4" style={{ height: "50px", outline: "none" }} placeholder="Whats Happening?" />
