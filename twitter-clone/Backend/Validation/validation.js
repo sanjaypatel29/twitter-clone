@@ -25,6 +25,7 @@ const loginValidator = (data) => {
 const tweetValidator = (data) => {
     const schema = Joi.object({
         title: Joi.string().required(),
+        verified: Joi.boolean().required(),
         image: Joi.string().required(),
         tHandle: Joi.string().min(1).required(),
         time: Joi.string().required(),

@@ -12,8 +12,9 @@ const postTweet = async (req, res) => {
         image: req.body.image,
         tHandle: req.body.tHandle,
         time: req.body.time,
+        verified: req.body.verified
     });
-
+    console.log(tweet)
     try {
         const savedtweets = await tweet.save();
         res.send(savedtweets);

@@ -15,6 +15,10 @@ const tweetDataSchema = new Schema({
         type: String,
         required: true
     },
+    verified: {
+        type: Boolean,
+        required: true
+    },
     time: {
         type: String,
         required: true

@@ -3,7 +3,7 @@ import "../Style/Widgets.css"
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const data = JSON.parse(localStorage.getItem("userData"))
-console.log(data.user)
+
 
 function Widgets() {
     return (

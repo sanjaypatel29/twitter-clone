@@ -34,11 +34,11 @@ function Login() {
                                 <form onSubmit={handleLogin}>
                                     <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                         <span className="text-muted">Phone, email, or username</span><br />
-                                        <input name="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
+                                        <input name="email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ height: "40px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="text" />
                                     </div>
                                     <div className="border-bottom bg-light mt-4 p-2 px-3 text-left">
                                         <span className="text-muted">Password</span><br />
-                                        <input name="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ height: "30px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="password" />
+                                        <input name="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ height: "40px", outline: "none", fontSize: "30px" }} className="border-0  w-100 bg-light" type="password" />
                                     </div>
                                     <button type="submit" className="mt-4 text-white bg-primary border border-primary rounded-pill font-weight-bold" style={{ height: "50px", outline: "none", width: "100%" }}>Login</button>
                                 </form>
